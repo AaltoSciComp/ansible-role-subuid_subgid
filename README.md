@@ -70,3 +70,16 @@ UID's can be not larger than 2^32. So if you have large UID's you may want to us
     subuid_bitshift: 16
     subgid_bitshift: 16
 ```
+
+### Set the number of subuids & subgids
+
+You can change the number of subuids & subgids with variables `subuid_uids` and `subgid_gids`.
+
+```yaml
+- name: Generate subuids & subgids
+  include_role:
+    name: subuid_subgid
+  vars:
+    subuid_uids: 131072
+    subgid_gids: 131072
+```
